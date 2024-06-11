@@ -50,6 +50,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE src)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "${BUILD_NAME}")
 
+
 target_link_libraries(${PROJECT_NAME} PRIVATE
 		pico_runtime
         pico_stdlib
