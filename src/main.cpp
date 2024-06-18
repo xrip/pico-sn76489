@@ -54,7 +54,7 @@ static void clock_init(uint pin) {
     uint slice_num = pwm_gpio_to_slice_num(pin);
 
     pwm_config c_pwm = pwm_get_default_config();
-    pwm_config_set_clkdiv(&c_pwm, clock_get_hz(clk_sys) / (2.0 * CLOCK_FREQUENCY));
+    pwm_config_set_clkdiv(&c_pwm, clock_get_hz(clk_sys) / (4.0 * CLOCK_FREQUENCY));
     pwm_config_set_wrap(&c_pwm, 3); //MAX PWM value
     pwm_init(slice_num, &c_pwm, true);
     pwm_set_gpio_level(pin, 2);
